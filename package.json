@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "install": "npm --prefix server ci",
-    "start": "npm --prefix server start"
+    "start": "npm --prefix server start",
+    "test": "npx --prefix server html-validate ./src/index.html"
   },
   "author": "Jason Cheatham <jason@jasoncheatham.com>"
 }
