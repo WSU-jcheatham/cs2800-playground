@@ -1,0 +1,9 @@
+{
+  "name": "playground",
+  "private": true,
+  "scripts": {
+    "install": "npm --prefix server ci",
+    "start": "npm --prefix server start"
+  },
+  "author": "Jason Cheatham <jason@jasoncheatham.com>"
+}
