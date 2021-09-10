@@ -2,8 +2,49 @@
 <html>
   <head>
 	  <title>&lt;p>: The paragraph tag</title>
+	  <style>
+	    html {
+	      background: #f0f0f0;
+	    }
+
+	    body {
+	      margin: 40px auto;
+	      max-width: 600px;
+	      padding: 0 20px;
+	      --pre-color: blue;
+	    }
+
+	    #content {
+	      padding: 20px;
+	    }
+
+	    pre {
+	      overflow: auto;
+	      color: var(--pre-color);
+	    }
+
+	    .section {
+	      border: solid 1px;
+	      margin: 20px 0;
+	      background: white;
+	      border-radius: 12px;
+	      overflow: hidden;
+	    }
+
+	    .section h2 {
+	      margin: 0;
+	      padding: 0.5rem;
+	      border-bottom: solid 4px var(--pre-color);
+	      background: #ffa0a0;
+	      /*
+		 border-top-left-radius: 12px;
+	         border-top-right-radius: 12px;
+	       */
+	    }
+	  </style>
   </head>
   <body>
+    <div id="content">
 	  <h1>Attributes</h1>
 
 	  <p>This element only includes the <a href="https://google.com">global attributes</a>.</p>
@@ -12,9 +53,10 @@
 
 	  <h1>Example</h1>
 
+	  <div class="section">
 	  <h2>HTML</h2>
 
-	  <pre>
+	  <pre style="--pre-color:green">
     &lt;p>This is the first paragraph of text.
        This is the first paragraph of text.
        This is the first paragraph of text.
@@ -24,6 +66,17 @@
        This is the second paragraph of text.
        This is the second paragraph of text.&lt;/p>
 	  </pre>
+	  <pre >
+    &lt;p>This is the first paragraph of text.
+       This is the first paragraph of text.
+       This is the first paragraph of text.
+       This is the first paragraph of text.&lt;/p>
+    &lt;p>This is the second paragraph of text.
+       This is the second paragraph of text.
+       This is the second paragraph of text.
+       This is the second paragraph of text.&lt;/p>
+	  </pre>
+	  </div>
 
 	  <h2>Result</h2>
 
@@ -34,5 +87,6 @@
 		  <p>This&nbsp;is the first paragraph of text. This is the first paragraph of text. This is the first paragraph of text. This is the first paragraph of text.</p>
 
 		  <p>This is the second paragraph. This is the second paragraph. This is the second paragraph. This is the second paragraph.</p></blockquote>
+    </div>
   </body>
 </html>
