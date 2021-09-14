@@ -1,7 +1,7 @@
-const express = require('express');
-const { join } = require('path');
-const { createServer } = require('livereload');
-const connectLiveReload = require('connect-livereload');
+import express from 'express';
+import { join } from 'path';
+import { createServer } from 'livereload';
+import connectLiveReload from 'connect-livereload';
 
 const srcDir = join(__dirname, '..', 'src');
 
@@ -18,7 +18,7 @@ const app = express();
 app.use(connectLiveReload());
 app.use(express.static(srcDir));
 
-const server = app.listen(5678, () => {
+const server = app.listen(7890, () => {
   const addr = server.address();
   const addrString =
     typeof addr === 'string' ? addr : `http://localhost:${addr?.port}`;

@@ -2,9 +2,9 @@
   "name": "playground",
   "private": true,
   "scripts": {
-    "install": "npm --prefix server ci",
-    "start": "npm --prefix server start",
-    "test": "npx --prefix server html-validate ./src/index.html"
+    "install": "npm --prefix course ci",
+    "start": "npm --prefix course start",
+    "test": "npx --prefix course test"
   },
   "author": "Jason Cheatham <jason@jasoncheatham.com>"
 }
