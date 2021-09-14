@@ -4,7 +4,7 @@
   "scripts": {
     "install": "npm --prefix course ci",
     "start": "npm --prefix course start",
-    "test": "npx --prefix course test"
+    "test": "npm --prefix course test"
   },
   "author": "Jason Cheatham <jason@jasoncheatham.com>"
 }
