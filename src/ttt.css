@@ -1,0 +1,38 @@
+#board {
+  font-family: sans-serif;
+  position: relative;
+  background: black;
+  width: 300px;
+  height: 300px;
+  border: solid 1px black;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-row-gap: 1px;
+  grid-column-gap: 1px;
+}
+
+.cell {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+}
+
+.cell:hover {
+  background: #f3f3f3;
+}
+
+.winner {
+  position: absolute;
+  white-space: nowrap;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #efe;
+  padding: 1em;
+  font-size: 40px;
+  box-shadow: 0 0 6px black;
+  border-radius: 12px;
+}
