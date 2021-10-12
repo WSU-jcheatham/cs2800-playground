@@ -1,6 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <title>Hi!</title>
+
+    <style>
+      h2 {
+        color: red;
+        background: black;
+        padding: 1em;
+        margin: 2em;
+      }
+
+      .rounded {
+        color: pink;
+        margin-top: 5em;
+      }
+
+      .subheading {
+        color: rgb(255, 0, 255);
+      }
+
+      #name-heading {
+        color: orange;
+      }
+    </style>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+      console.log('hello!');
+    </script>
+
+    <script src="script.js"></script>
+  </head>
   <body>
-    <h1>Hello, world!</h1>
+    <header>
+      <h1 style="color:green;border-bottom:solid 1px;">Hello, world!</h1>
+    </header>
+
+    <main>
+      <h2>Hello, world!</h2>
+
+      <h2 class="subheading rounded">Hello, again!</h2>
+
+      <h2 id="name-heading" class="subheading">My name is Jason</h2>
+
+      <!-- <img src="cookies.jpg" alt="A plate of cookies"> -->
+
+      <div style="color: gray">
+        <p>Hello there!</p>
+
+        <ul>
+          <li>One</li>
+        </ul>
+
+        <ol>
+          <li>One</li>
+        </ol>
+
+        <a>Click me!</a><a>Click me!</a>
+      </div>
+    </main>
   </body>
 </html>
