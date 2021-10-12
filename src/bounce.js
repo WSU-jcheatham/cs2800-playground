@@ -4,12 +4,6 @@ const minSide = 50;
 const maxX = frame.clientWidth;
 const maxY = frame.clientHeight;
 
-function perturb(value, max) {
-  const delta = Math.floor(Math.random() * max);
-  const isNeg = Math.random() < 0.5;
-  return value + (isNeg ? -delta : delta);
-}
-
 function randInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
