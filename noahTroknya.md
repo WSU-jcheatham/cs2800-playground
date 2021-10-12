@@ -1,5 +1,10 @@
-#Vulnerability Taxonomy CWE Homework
-##Noah Troknya
+Vulnerability Taxonomy CWE Homework
+===================================
+
+
+Noah Troknya
+------------
+
 
 One of the CWE vulnerabilities that I run into frequently is Incorrect Default Permissions.  
 This is also known as CWE-276.  What this CWE vulnerability is is quite simple.  As the name 
