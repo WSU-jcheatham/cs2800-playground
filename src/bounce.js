@@ -9,10 +9,8 @@ function randInt(min, max) {
 }
 
 
-let width = 40;
-let height = 80;
-let top = randInt(0, maxY - height);
-let left = randInt(0, maxX - width);
+let top = randInt(0, 50);
+let left = randInt(0, 50);
 let xDir = randInt(5, 10);
 let yDir = randInt(5, 10);
 
@@ -23,17 +21,25 @@ let gd = 10;
 let b = 200;
 let bd = 20;
 
-for (let i = 0; i < 1000; i++) {
+const maxDivs = 1000;
+const countDiv = document.querySelector('#counter');
+
+function createBox(options) {
+  if (frame.children.length >= 500) {
+    frame.firstElementChild.remove();
+  }
+
   const box = document.createElement('div');
   box.classList.add('box');
-  box.style.width = `${width}px`;
-  box.style.height = `${height}px`;
   box.style.top = `${top}px`;
   box.style.left = `${left}px`;
   box.style.background = `rgb(${r}, ${g}, ${b})`;
   frame.append(box);
 
   // update box stuff for next loop pass
+
+  const height = box.offsetHeight;
+  const width = box.offsetWidth;
 
   if (top + yDir + height > maxY) {
     yDir = -randInt(1, 8);
@@ -63,9 +69,24 @@ for (let i = 0; i < 1000; i++) {
     g += gd;
   }
 
-  b += bd;
-  if (b > 255 || b < 0) {
-    bd = -bd;
-    b += bd;
-  }
+  // b += bd;
+  // if (b > 255 || b < 0) {
+  //   bd = -bd;
+  //   b += bd;
+  // }
+
+  options.count++;
+
+  countDiv.textContent = `${frame.children.length}`;
 }
+
+let interval = 50;
+const opts = { count: 0 }
+const q = setInterval(createBox, interval, opts);
+
+const t = setTimeout(() => {
+  console.log(opts)
+}, 2000);
+
+
+console.log('Done!');
