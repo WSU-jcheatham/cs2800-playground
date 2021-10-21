@@ -18,6 +18,16 @@ const app = express();
 app.use(connectLiveReload());
 app.use(express.static(srcDir));
 
+app.get('/images', (req, res) => {
+  setTimeout(() => {
+    res.json([
+      'cookies.jpg',
+      'bakery-style.jpg',
+      'cookie-grab.jpg',
+    ]);
+  }, 1000);
+});
+
 const server = app.listen(5678, () => {
   const addr = server.address();
   const addrString =
