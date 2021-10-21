@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bounce</title>
+    <style>
+      html, body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+      #court {
+        width: 700px;
+        height: 500px;
+        margin: 90px auto 40px auto;
+        border: solid 2px #942;
+        position: relative;
+      }
+      #ball {
+        width: 100px;
+        position: absolute;
+      }
+      #ball[data-dir="left"] {
+        transform: scaleX(-1);
+      }
+      #start-button {
+        display: block;
+        margin: 20px auto;
+      }
+      #bouncers {
+        text-align: center;
+      }
+      #bouncers button {
+        margin: 0 10px;
+      }
+    </style>
+    <script type="module">
+      import { init } from './bounce.js';
+      window.addEventListener('load', init);
+    </script>
+  </head>
+  <body>
+    <div id="court">
+      <img id="ball">
+    </div>
+
+    <div id="bouncers">
+    </div>
+  </body>
+</html>

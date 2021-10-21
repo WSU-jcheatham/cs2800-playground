@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Ball",
+    "image": "ball.png",
+    "sound": "bounce.mp3",
+    "background": "#f0f0f0"
+  },
+  {
+    "name": "Duck",
+    "image": "duck.png",
+    "sound": "quack.wav",
+    "background": "#def"
+  }
+]
