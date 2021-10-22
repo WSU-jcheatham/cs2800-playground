@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello</title>
+    <script type="module">
+      const button = document.querySelector('#click-me');
+      console.log(button);
+
+      button.addEventListener('click', () => {
+        console.log('clicked the button!');
+      });
+
+      let buttonTop = 0;
+      let buttonLeft = 0;
+      button.style.position = 'relative';
+
+      button.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowUp') {
+          console.log('go up');
+          buttonTop -= 10;
+          button.style.top = `${buttonTop}px`;
+        } else if (event.key === 'ArrowDown') {
+          console.log('go down');
+          buttonTop += 10;
+          button.style.top = `${buttonTop}px`;
+        } else if (event.key === 'ArrowLeft') {
+          console.log('go left');
+          buttonLeft -= 10;
+          button.style.left = `${buttonLeft}px`;
+        } else if (event.key === 'ArrowRight') {
+          console.log('go right');
+          buttonLeft += 10;
+          button.style.left = `${buttonLeft}px`;
+        }
+      });
+
+      document.querySelector('h1').addEventListener('click', () => {
+        console.log('clicked the header!');
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+    <button id="click-me">Click me</button>
+  </body>
+</html>
+

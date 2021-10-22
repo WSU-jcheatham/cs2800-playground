@@ -2,5 +2,27 @@
 <html>
   <body>
     <h1>Hello, world!</h1>
+    <script type="module">
+      async function doStuff() {
+        const response = await fetch('bouncers.json');
+        // const text = await response.text();
+        // console.log(text);
+        // const obj = JSON.parse(text);
+        const obj = await response.json();
+        console.log(obj);
+        console.log(obj[0].name);
+
+        // const jsonPromise = response.json();
+        // console.log('doing other stuff');
+        // console.log('doing even more stuff');
+        // const obj = await jsonPromise;
+        return 5;
+      }
+
+      console.log('before doStuff');
+      const returnValue = await doStuff();
+      console.log('doStuff value:', returnValue);
+      console.log('after doStuff');
+    </script>
   </body>
 </html>
