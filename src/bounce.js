@@ -7,6 +7,7 @@ let dy = 5;
 export async function init() {
   const response = await fetch('bouncers.json');
   const bouncers = await response.json();
+  console.log(bouncers);
 
   const list = document.querySelector('#bouncers');
   for (const bouncer of bouncers) {
@@ -14,18 +15,44 @@ export async function init() {
     item.textContent = bouncer.name;
     list.append(item);
 
-    item.addEventListener('click', () => {
-      clearInterval(interval);
-      startBouncing(bouncer);
-    });
+    const item2 = document.createElement('button');
+    item2.textContent = bouncer.name;
+    list.append(item2);
+
+    const item3 = document.createElement('button');
+    item3.textContent = bouncer.name;
+    list.append(item3);
+
+    // item.addEventListener('click', () => {
+    //   clearInterval(interval);
+    //   startBouncing(bouncer);
+    // });
   }
 
   const stop = document.createElement('button');
   stop.textContent = 'Stop';
-  stop.addEventListener('click', () => {
-    clearInterval(interval);
-  });
+  // stop.addEventListener('click', () => {
+  //   clearInterval(interval);
+  // });
   list.append(stop);
+
+
+  // "event delegation"
+  list.addEventListener('click', (event) => {
+    if (event.target.tagName === 'BUTTON') {
+      const text = event.target.textContent;
+      if (text === 'Stop') {
+        clearInterval(interval);
+      } else {
+        for (let i = 0; i < bouncers.length; i++) {
+          if (bouncers[i].name === text) {
+            clearInterval(interval);
+            startBouncing(bouncers[i]);
+          }
+        }
+      }
+    }
+  });
 }
 
 function startBouncing(bouncer) {
