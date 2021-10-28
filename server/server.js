@@ -18,6 +18,11 @@ const app = express();
 app.use(connectLiveReload());
 app.use(express.static(srcDir));
 
+app.get('/hello', (req, res) => {
+  const param = req.query;
+  res.send(`Hi, ${param["first-name"]}, I hear you like ${param["favorite-food"]}`);
+});
+
 const server = app.listen(5678, () => {
   const addr = server.address();
   const addrString =
