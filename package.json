@@ -4,6 +4,8 @@
   "scripts": {
     "install": "npm --prefix server ci",
     "start": "npm --prefix server start",
+    "build": "npm --prefix server run build",
+    "build:watch": "npm --prefix server run build:watch",
     "test": "npx --prefix server html-validate ./src/index.html"
   },
   "author": "Jason Cheatham <jason@jasoncheatham.com>"

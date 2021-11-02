@@ -5,12 +5,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "babel ../src -d ../public",
+    "build:watch": "babel ../src -d ../public --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/cli": "~7.16.0",
+    "@babel/core": "~7.16.0",
+    "@babel/preset-react": "~7.16.0",
     "connect-livereload": "~0.6.1",
     "express": "~4.17.1",
     "html-validate": "~5.4.1",

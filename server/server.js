@@ -3,7 +3,7 @@ const { join } = require('path');
 const { createServer } = require('livereload');
 const connectLiveReload = require('connect-livereload');
 
-const srcDir = join(__dirname, '..', 'src');
+const srcDir = join(__dirname, '..', 'public');
 
 // The LiveReload server watches for file changes and notifies the browser
 const lrServer = createServer();
