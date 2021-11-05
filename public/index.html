@@ -6,12 +6,14 @@
     <script type="module">
       import { React, ReactDOM } from 'https://unpkg.com/es-react';
       import Circle from './Circle.js';
+      import Square from './Square.js';
       import Board from './Board.js';
 
       const container = document.querySelector('#react-stuff');
       ReactDOM.render(React.createElement(Board), container);
 
       let bouncers = [];
+      const bouncerType = Square;
 
       const button = document.querySelector('#start-button');
       button.addEventListener('click', () => {
@@ -20,7 +22,8 @@
         let b = Math.floor(Math.random() * 255);
         let color = `rgb(${r}, ${g}, ${b})`;
         const bouncer = {
-          lifetime: Math.floor(Math.random() * 500),
+          Bouncer: Math.random() < 0.25 ? Circle : Square,
+          lifetime: Infinity,
           color,
           position: { top: 0, left: 0 },
         };
@@ -28,7 +31,7 @@
         bouncers.push(bouncer);
 
         ReactDOM.render(
-          React.createElement(Board, { bouncerType: Circle, bouncers }),
+          React.createElement(Board, { bouncers }),
           container
         );
 
@@ -38,7 +41,6 @@
         bouncer.interval = setInterval(() => {
           ReactDOM.render(
             React.createElement(Board, {
-              bouncerType: Circle,
               bouncers,
             }),
             container
@@ -70,7 +72,6 @@
             clearInterval(bouncer.interval);
             ReactDOM.render(
               React.createElement(Board, {
-                bouncerType: Circle,
                 bouncers,
               }),
               container
@@ -85,7 +86,6 @@
         clearInterval(bouncer.interval);
         ReactDOM.render(
           React.createElement(Board, {
-            bouncerType: Circle,
             bouncers,
           }),
           container

@@ -1,5 +1,6 @@
 import { React } from 'https://unpkg.com/es-react';
-export default function Circle(props) {
+
+function Circle(props) {
   const position = props.position ?? {};
   const style = {
     position: 'absolute',
@@ -8,9 +9,8 @@ export default function Circle(props) {
     width: '100px',
     height: '100px',
     background: props.color ?? 'green',
-    borderRadius: '50%'
+    borderRadius: '50%',
   };
-  return /*#__PURE__*/React.createElement("div", {
-    style: style
-  });
+
+  return <div style={style} />;
 }
