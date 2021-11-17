@@ -1,0 +1,69 @@
+.button {
+  border: solid 1px #ddd;
+  background: #eee;
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  color: #555;
+}
+
+.button:hover {
+  background: #e0e0e0;
+}
+
+.button:active {
+  background: #d7d7d7;
+}
+
+.cancel-button {
+  color: white;
+  background: #f03030;
+}
+
+.cancel-button:hover {
+  background: #e03030;
+}
+
+.cancel-button:active {
+  background: #ff3030;
+}
+
+.toggle {
+  width: 5rem;
+}
+
+.toggle-on,
+.toggle-on:hover,
+.toggle-on:active {
+  color: white;
+  background: #00b000;
+}
+
+.toggle-off,
+.toggle-off:hover,
+.toggle-off:active {
+  color: #eee;
+  background: #a0d0a0;
+}
+
+.collapsible-pane {
+  height: 1rem;
+  margin: 1rem 0;
+  border: solid 1px;
+  padding: 0.5rem;
+  overflow: hidden;
+}
+
+.collapsible-pane h4 {
+  margin: 0;
+}
+
+.collapsible-pane-expanded {
+  height: auto;
+}
+
+.arrow {
+  display: inline-block;
+  width: 1rem;
+}
