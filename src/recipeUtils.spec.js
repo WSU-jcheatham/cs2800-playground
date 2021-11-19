@@ -7,11 +7,11 @@ test('getNutrition returns nutrition for a valid recipe', () => {
       { name: 'chocolate chips', calories: 300, fat: 30, sugar: 40 }
     ]
   });
-  expect(nutrition).toEqual({
+  expect(nutrition).toEqual(expect.objectContaining({
     calories: 75,
     fat: 7.5,
     sugar: 10
-  });
+  }));
 });
 
 test('getNutrition throws an error with an invalid recipe', () => {

@@ -12,6 +12,7 @@ export function getNutrition(recipe) {
   return {
     calories: calories / recipe.servings,
     fat: fat / recipe.servings,
-    sugar: sugar / recipe.servings
+    sugar: sugar / recipe.servings,
+    time: 20,
   };
 }
