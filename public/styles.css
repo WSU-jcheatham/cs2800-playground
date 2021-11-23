@@ -1,0 +1,40 @@
+body {
+  font-family: sans-serif;
+}
+
+#content {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+#output,
+.input-form {
+  margin: 10px 30px;
+  padding: 16px;
+  border-radius: 8px;
+  border: solid 1px #ccc;
+  display: inline-flex;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.input-form label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-form input {
+  border: solid 1px #ddd;
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 100%;
+}
+
+.input-form button {
+  border: solid 1px #ddd;
+  background: #f0f0f0;
+  border-radius: 4px;
+  font-size: 80%;
+  padding: 0 8px;
+}

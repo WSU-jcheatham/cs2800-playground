@@ -5,17 +5,33 @@
     <link rel="stylesheet" href="styles.css">
     <script type="module">
       import { React, ReactDOM } from 'https://unpkg.com/es-react';
+      import InputForm from './InputForm.js';
+
+      const props = {
+        saveName: () => {
+          const output = document.querySelector('#output');
+          output.textContent = `Hi, ${props.value}!`;
+        },
+
+        value: '',
+
+        setValue: (val) => {
+          props.value = val;
+          console.log(`set props.value to ${val}`);
+          ReactDOM.render(React.createElement(InputForm, props), container);
+        }
+      };
 
       const container = document.querySelector('#react-stuff');
-      ReactDOM.render(React.createElement('div', {
-        className: "foo",
-        style: { width: '100px', height: '100px', background: 'green' }
-      }), container);
+      ReactDOM.render(React.createElement(InputForm, props), container);
     </script>
   </head>
   <body>
     <h1>Hello, world!</h1>
 
-    <div id="react-stuff"></div>
+    <div id="content">
+      <div id="react-stuff"></div>
+      <div id="output">Please enter your name</div>
+    </div>
   </body>
 </html>

@@ -8,5 +8,12 @@
     "build:watch": "npm --prefix server run build:watch",
     "test": "npm --prefix server test"
   },
-  "author": "Jason Cheatham <jason@jasoncheatham.com>"
+  "author": "Jason Cheatham <jason@jasoncheatham.com>",
+  "devDependencies": {
+    "@testing-library/react": "~12.1.2"
+  },
+  "dependencies": {
+    "react": "~17.0.2",
+    "react-dom": "~17.0.2"
+  }
 }
