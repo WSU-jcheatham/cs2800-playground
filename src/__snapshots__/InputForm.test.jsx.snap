@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputForm renders 1`] = `
+<div>
+  <form
+    class="input-form"
+  >
+    <label>
+      Name
+       
+      <input
+        value=""
+      />
+    </label>
+    <button
+      type="button"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+`;
